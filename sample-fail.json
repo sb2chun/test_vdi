@@ -1,0 +1,42 @@
+{
+    "serverUrl": "http://사내SonarIP:포트",
+    "taskId": "AaD2MrsX9NficnfqPwgm",
+    "status": "SUCCESS",
+    "analysedAt": "2024-06-19T10:00:00+0000",
+    "revision": "b964...",
+    "project": {
+        "key": "dev_main_com.oneoip-ois",
+        "name": "dev_main_com.oneoip-ois",
+        "url": "http://사내SonarIP:포트/dashborad?id=dev_main_com.oneoip-ois"
+    },
+    "branch": {
+        "name": "8070",
+        "type":"pull_request",
+        "isMain":false,
+        "url":"http://사내SonarIP:포트/dashborad?id=dev_main_com.oneoip-ois"
+    },
+    "qualityGate": {
+        "name":"M16 QG",
+        "status": "ERROR",
+        "conditions": [
+            {
+                "metric": "new_bugs",
+                "operator": "Greater_than",
+                "value": "0",
+                "status": "OK",
+                "errothreshold": "0"
+            },
+            {
+                "metric": "new_code_smells",
+                "operator": "Greater_than",
+                "value": "2",
+                "status": "ERROR",
+                "errothreshold": "0"    
+            }
+        ]
+    },
+    "properties": {
+        "sonar.analysis.detectedscm": "git",
+        "sonar.analysis.detectedci": "jenkins"
+    }
+}

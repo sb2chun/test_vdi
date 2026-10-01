@@ -1,0 +1,12 @@
+{
+  "serverUrl": "http://sonar.company.com",
+  "taskId": "AYtest",
+  "status": "SUCCESS",
+  "revision": "abc123",
+  "project": { "key": "dev_main_ui", "name": "dev_main_ui" },
+  "branch": { "name": "101", "type": "PULL_REQUEST", "isMain": false },
+  "qualityGate": { "name": "Sonar way", "status": "ERROR", "conditions": [] },
+  "properties": {}
+}
+
+curl -X POST http://localhost:4000/sonar-webhook -H "Content-Type: application/json" --data-binary @sample.json

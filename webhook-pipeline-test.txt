@@ -1,0 +1,16 @@
+pipeline {
+  agent any
+  stages {
+    stage('reach test') {
+      steps {
+        script {
+          if (isUnix()) {
+            sh 'curl -v --max-time 10 http://내IP:4000/health'
+          } else {
+            bat 'curl -v --max-time 10 http://내IP:4000/health'
+          }
+        }
+      }
+    }
+  }
+}

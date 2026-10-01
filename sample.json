@@ -8,8 +8,3 @@
   "qualityGate": { "name": "Sonar way", "status": "ERROR", "conditions": [] },
   "properties": {}
 }
-
-// 테스트
-// curl -X POST http://localhost:4000/sonar-webhook -H "Content-Type: application/json" --data-binary @sample.json
-// 방화벽 on
-// netsh advfirewall firewall add rule name="sonar-webhook-test" dir=in action=allow protocol=TCP localport=4000
